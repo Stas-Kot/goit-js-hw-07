@@ -1,2 +1,1 @@
-# goit-js-hw-07
-Репозиторий для выполнения домашнего задания №6 по JS
+# GoIT JavaScript Course Homework
