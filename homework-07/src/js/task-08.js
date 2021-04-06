@@ -3,7 +3,7 @@ const divBoxesEl = document.getElementById('boxes');
 const inputEl = divControlsEl.querySelector('input');
 const destroyBtnEl = document.querySelector('[data-action="destroy"]');
 const renderBtnEl = document.querySelector('[data-action="render"]');
-console.log(Number(inputEl.getAttribute('max')));
+
 const createBoxes = function (amount) {
     for (let i = 1; i <= amount; i += 1) {
         divBoxesEl.insertAdjacentHTML('beforeend', '<div class = "newDiv"></div>') 
