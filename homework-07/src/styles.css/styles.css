@@ -34,3 +34,7 @@
 .newDiv {
   margin: 5px;
 }
+
+div#controls {
+    padding: 20px;
+    text-align: center;
