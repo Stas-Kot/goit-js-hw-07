@@ -14,7 +14,8 @@ const createBoxes = function (amount) {
     }
 };
 const onRenderBtnClick = function () {
-    createBoxes(inputEl.value);
+    if (inputEl.value <= 100) {
+        createBoxes(inputEl.value);
     const divsEl = divBoxesEl.querySelectorAll('.newDiv');
     
     let size = 20;
@@ -26,6 +27,10 @@ const onRenderBtnClick = function () {
 
         element.style.backgroundColor = `rgb(${getRandom(0, 255)}, ${getRandom(0, 255)}, ${getRandom(0, 255)})`;
     });
+    } else {
+        inputEl.classList.add('invalid')
+    }
+    
 
 function getRandom(min, max){
   return Math.ceil(Math.random() * ((max - min) + min))

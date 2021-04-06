@@ -7,7 +7,7 @@ const ref = {
 ref.inputEl.addEventListener('input', onInputChange)
 
 function onInputChange(event) {
-    if (event.currentTarget.value === '') {
+    if (event.currentTarget.value < 1) {
         ref.nameSpan.textContent = 'незнакомец'
     } else {
         ref.nameSpan.textContent = event.currentTarget.value
