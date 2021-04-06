@@ -3,14 +3,14 @@ const divBoxesEl = document.getElementById('boxes');
 const inputEl = divControlsEl.querySelector('input');
 const destroyBtnEl = document.querySelector('[data-action="destroy"]');
 const renderBtnEl = document.querySelector('[data-action="render"]');
-
+console.log(Number(inputEl.getAttribute('max')));
 const createBoxes = function (amount) {
     for (let i = 1; i <= amount; i += 1) {
         divBoxesEl.insertAdjacentHTML('beforeend', '<div class = "newDiv"></div>') 
     }
 };
 const onRenderBtnClick = function () {
-    if (inputEl.value <= 100) {
+    if (inputEl.value <= Number(inputEl.getAttribute('max'))) {
         createBoxes(inputEl.value);
     const divsEl = divBoxesEl.querySelectorAll('.newDiv');
     let size = 20;
